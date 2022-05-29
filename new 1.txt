@@ -1,0 +1,197 @@
+13
+<div class="container header__top">
+    <div class="header__logo">
+      <h1 class="header__title">
+        SC
+        <span class="header__subtitle">Super Courses</span>
+      </h1>
+    </div>
+ 
+ 58-82
+ .display-title {
+  font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: 1.3px;
+}
+@media (min-width: 600px) {
+  .display-title {
+    font-size: 3rem;
+  }
+}
+
+.page-title {
+  text-align: center;
+  font-weight: 700;
+}
+@media (min-width: 600px) {
+  .page-title {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
+
+.text-light {
+  color: #efefef;
+}
+
+
+39-47
+  <div class="header__main">
+    <p class="display-title text-light">
+      Learn stuff with our awesome courses!
+    </p>
+  </div>
+  <div class="arrow"><svg width="24" height="24" viewBox="0 0 24 24">
+  <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+</svg></div>
+
+
+67
+.header .arrow {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: -200px auto 0;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #daed0e;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+.header .arrow:hover, .header .arrow:focus {
+  -webkit-animation: point-down 1s alternate infinite;
+          animation: point-down 1s alternate infinite;
+}
+.header .arrow svg {
+  margin-top: 15px;
+  fill: #333;
+}
+.header .header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+263
+.header .header__title {
+  font-family: "Rammetto One", cursive;
+  font-size: 2rem;
+  color: #ea332a;
+}
+.header .header__subtitle {
+  font-size: 1.2rem;
+  display: block;
+  margin-top: -10px;
+  line-height: 0.9;
+  margin-left: 20px;
+}
+.header .header__main {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, rgba(234, 51, 42, 0.7), rgba(170, 37, 30, 0.7)), url(https://images.unsplash.com/photo-1504670073073-6123e39e0754?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=5a5a75419e84813c91b906d3fc38a4b8);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
+
+
+293
+.page-content {
+  margin-top: 150px;
+}
+
+.card {
+  line-height: 1;
+  transition: all 0.3s;
+}
+.card:hover, .card:active {
+  transform: scale(1.1);
+  border: 1px solid #daed0e;
+}
+
+.card__title,
+.card__price {
+  font-weight: bold;
+}
+
+.card__title {
+  font-size: 1.1rem;
+}
+
+.card__text {
+  display: inline-block;
+  padding: 0.5em;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #333;
+  background-color: #daed0e;
+}
+
+.card__btn {
+  width: 100%;
+  text-align: center;
+  padding: 0.5em;
+  border-radius: 5px;
+  background-color: #ea332a;
+  border: 1px solid #b61a12;
+  color: #fff;
+}
+.card__btn:hover, .card__btn:focus, .card__btn:active {
+  transform: translatey(2px);
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
+  background-color: #b61a12;
+}
+.card__btn:active {
+  border: 3px solid #9e1610 inset;
+}
+
+.footer {
+  margin-top: 4em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  border-top: 1px dashed #b61a12;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.footer__link-item,
+.footer__link-item {
+  color: #ea332a;
+}
+.footer__link-item:hover, .footer__link-item:focus,
+.footer__link-item:hover,
+.footer__link-item:focus {
+  color: #9e1610;
+}
+
+@-webkit-keyframes point-down {
+  100% {
+    transform: translatey(20px);
+  }
+}
+
+147
+
+<footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__links">
+    <ul class="footer__list">
+      <li class="footer__list-item"><a class="footer__link-item" href="#">About us</a></li>
+      <li class="footer__list-item"><a class="footer__link-item" href="#">Become an instructor</a></li>
+      <li class="footer__list-item"><a class="footer__link-item" href="#">Legal</a></li>
+    </ul>
+  </div>
+  <div class="credits">
+    <p class="credits__small-text">&copy;2018 Maria Antonietta Perna</p>
+  </div>  
+  </div>
+</footer>

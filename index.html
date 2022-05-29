@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>E-commerce(Cake Shop)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+</head>
+<body>
+<nav>
+<!-- partial:index.partial.html -->
+<header class="header">
+<div class="header__cart">
+   <input type="checkbox" id="check"> 
+   <label for="check" class="checkbtn"> <i class="fas fa-bars"></i></label> 
+   <label class="logo">Cake<span>Bakers</span></label> 
+
+  	     <b class="header__submenu" id="submenu">
+          <button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="25" height="25" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> </button>
+          <div id="shopping-cart" class="shopping-cart-container" style="height:300px;overflow-y:scroll;">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p><a href="payment.html">
+            <a href="payment.html" class="cart-btn">Checkout</a>
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+          </div>
+        </b>
+  
+	 <ul>
+	     
+		 <li><a href="#">Home</a></li> 
+         <li><a href="#favourites">Order</a></li> 
+         <li><a href="#categories">Categories</a></li> 
+         <li><a href="#contactus">Contact us</a></li> 
+         <li><a href="signin.html">Sign in</a></li> 
+
+      </ul>
+    </div>
+	
+</header>
+</nav>
+<section class="mainpic"> 
+   <aside style="padding:200px 20px;"> 
+    <h1 style="color: white;"> Baked with Love Cafe 🤍</h1> 
+    <br> 
+    <p style="color: white">We have variety of cakes for every occasion. <br>We also provide customized cakes at affordable prices. <br> So surprise your near and dear ones with fresh and yummy cakes! </p> 
+    <br> 
+    <br> <a  href="#favourites">
+    <button type="button" class="myButton">ORDER NOW </button> </a>
+   </aside> 
+   <br> 
+  </section> 
+   <div id="grid">
+  <div id="favourites" class="favourites"> 
+   <br> 
+   <div> 
+    <button class="line">Favourite picks for you </button> 
+   </div> 
+   <br> 
+   <hr> 
+   <br> 
+  
+     <div class="grid"> 
+    <div class="card">
+    	<img src="images\Top picks\strawberry.jpg" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Glazed Strawberry</h4>       
+        <p class="card__price">$300</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="1">Add to Cart</button>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="images\Top picks\truffle.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Chocolate Truffle</h4>       
+        <p class="card__price">$250</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="2">Add to Cart</button>
+      </div>
+    </div>
+	
+	
+	<div class="card">
+      <img src="images\Top picks\blueberry.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Lemon Blueberry</h4>       
+        <p class="card__price">$500</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="3">Add to Cart</button>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="images\Top picks\butterscotch.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Choco Butterscotch</h4>       
+        <p class="card__price">$450</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="4">Add to Cart</button>
+      </div>
+    </div>
+    
+		<div class="card">
+      <img src="images\Top picks\vanilla.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Floral Vanilla</h4>       
+        <p class="card__price">$350</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="5">Add to Cart</button>
+      </div>
+    </div>
+	
+	
+		<div class="card">
+      <img src="images\Top picks\caramel.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Classic Caramel</h4>       
+        <p class="card__price">$350</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="6">Add to Cart</button>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="images\Top picks\raspberry.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Coconut Raspberry</h4>       
+        <p class="card__price">$550</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="images\Top picks\pineapple.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Pineapple</h4>       
+        <p class="card__price">$150</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="images\Top picks\velvet.webp" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Red Velvet</h4>       
+        <p class="card__price">$250</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="images\Top picks\icing.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Rainbow Icing</h4>       
+        <p class="card__price">$400</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="images\Top picks\walnut.jpg" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Royal Walnut</h4>       
+        <p class="card__price">$300</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+	
+	<div class="card">
+      <img src="images\Top picks\forest.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">White Forest</h4>       
+        <p class="card__price">$250</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+	
+	
+	<div class="card">
+      <img src="images\Top picks\black.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Dark Chocolate</h4>       
+        <p class="card__price">$400</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="13">Add to Cart</button>
+      </div>
+    </div>
+	
+	
+	<div class="card">
+      <img src="images\Top picks\blue.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Plum & Berries</h4>       
+        <p class="card__price">$350</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="14">Add to Cart</button>
+      </div>
+    </div>
+	
+	
+	<div class="card">
+      <img src="images\Top picks\dark.png" class="card__image" alt="">
+      <div class="card__info">
+	  <center>
+        <h4 class="card__title">Kitkat & Nuts</h4>       
+        <p class="card__price">$400</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="15">Add to Cart</button>
+      </div>
+    </div>
+	
+	</div>
+	 <div class="photocakes"> 
+   <br> 
+   <div class="contained"> 
+    <img class="img" src="images\photocake\photoc.jpg"> 
+   </div> 
+   <div class="contain"> 
+    <h1> Also, get your favourite photos on the cake..! </h1> 
+    <h4 class="card__title">My Photo Cake</h4>  
+    <i style="color:pink;">Surprise your friends and family with their photos on the cake for every special occasion. Have any photo printed on whichever cake you like at affordable prices.</i> 
+    <br> 
+   <p class="card__price">$1000</p>
+   <strong>Add your photo below</strong><br><br>
+  <form>
+  <input type="file" accept="image/*" required>
+  </form><br>
+    <button type="button" class="myButton add-to-cart" href="#" data-id="16">Get It Now</button> 
+	
+    <br> 
+   </div> 
+  </div>
+	
+	<br>
+	<hr>
+	
+	</div>
+	
+	<!-- scrolly -->
+	<div id="categories" class="scroll"> 
+   <br> 
+   <button class="line">Shop By Categories</button> 
+   <br> 
+   <h3>Specially Designed</h3> 
+   <div class="floral">
+   
+  <!-- slidew 1 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\sd\pink.jpg">    
+	  <center>
+        <h4 class="card__title">Pink Isomalt</h4>       
+        <p class="card__price">$300</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="17">Add to Cart</button>  
+      </div>
+	</div>
+	</div>
+    
+<!-- slidew 2 --> 
+  <div class="contains">  
+  <div  class="slide">  
+    <div class="card">
+      <img src="images\sd\blue.jpg">    
+	  <center>
+        <h4 class="card__title">Galaxy Blueberry</h4>       
+        <p class="card__price">$350</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="18">Add to Cart</button>  
+        </div>
+    </div>
+	</div>
+	
+  <!-- slidew 3 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\sd\petals.jpg">  
+	  <center>
+        <h4 class="card__title">Fondant Petals</h4>       
+        <p class="card__price">$300</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="19">Add to Cart</button> 
+      </div>
+	</div>
+	</div>
+	
+
+  <!-- slidew 4 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\sd\purple.png">  
+	  <center>
+        <h4 class="card__title">Donut Creamy</h4>       
+        <p class="card__price">$340</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="20">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 5 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\sd\rose.jpg">  
+	  <center>
+        <h4 class="card__title">Rosy Buttermilk</h4>       
+        <p class="card__price">$440</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="21">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 6 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\sd\golden.jpg">  
+	  <center>
+        <h4 class="card__title">Golden Vanilla</h4>       
+        <p class="card__price">$310</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="22">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 7 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\sd\white.jpg">  
+	  <center>
+        <h4 class="card__title">Candies & Cream</h4>       
+        <p class="card__price">$380</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="23">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 8 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\sd\beads.jpg">  
+	  <center>
+        <h4 class="card__title">White Chocolate</h4>       
+        <p class="card__price">$340</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="24">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	<br>
+	<br>	
+   </div>
+   <br> 
+   <h3>Tier Cakes</h3> 
+   <div class="floral">
+   
+  <!-- slidew 1 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\tier\blackgold.png">    
+	  <center>
+        <h4 class="card__title">Black Velvet</h4>       
+        <p class="card__price">$1300</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="33">Add to Cart</button>  
+      </div>
+	</div>
+	</div>
+    
+<!-- slidew 2 --> 
+  <div class="contains">  
+  <div  class="slide">  
+    <div class="card">
+      <img src="images\tier\rosy.png">    
+	  <center>
+        <h4 class="card__title">Floral Coconut</h4>       
+        <p class="card__price">$1350</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="34">Add to Cart</button>  
+        </div>
+    </div>
+	</div>
+	
+  <!-- slidew 3 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\tier\brown.png">  
+	  <center>
+        <h4 class="card__title">Choco-Chips</h4>       
+        <p class="card__price">$1300</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="35">Add to Cart</button> 
+      </div>
+	</div>
+	</div>
+	
+
+  <!-- slidew 4 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\tier\pink.png">  
+	  <center>
+        <h4 class="card__title">Fondant Floral</h4>       
+        <p class="card__price">$1340</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="36">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 5 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\tier\yellow.png">  
+	  <center>
+        <h4 class="card__title">Jasmine Vanilla</h4>       
+        <p class="card__price">$1440</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="37">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 6 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\tier\dotted.png">  
+	  <center>
+        <h4 class="card__title">Strips & Dotted</h4>       
+        <p class="card__price">$1310</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="38">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 7 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\tier\goldpink.png">  
+	  <center>
+        <h4 class="card__title">Rose Gold</h4>       
+        <p class="card__price">$1380</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="39">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 8 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\tier\white.png">  
+	  <center>
+        <h4 class="card__title">Cheese & Cream</h4>       
+        <p class="card__price">$1340</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="40">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	<br>
+	<br>	
+   </div>
+
+   <br> 
+   <h3>3-Dimensional Cake</h3> 
+   <div class="floral">
+   
+
+  <!-- slidew 1 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\3d\pinnata.jpg">    
+	  <center>
+        <h4 class="card__title">Chocolate Pinata</h4>       
+        <p class="card__price">$450</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="25">Add to Cart</button>  
+      </div>
+	</div>
+	</div>
+    
+<!-- slidew 2 --> 
+  <div class="contains">  
+  <div  class="slide">  
+    <div class="card">
+      <img src="images\3d\marvel.png">    
+	  <center>
+        <h4 class="card__title">Marvel Cake</h4>       
+        <p class="card__price">$750</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="26">Add to Cart</button>  
+        </div>
+    </div>
+	</div>
+	
+  <!-- slidew 3 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\3d\hp.png">  
+	  <center>
+        <h4 class="card__title">Harry Potter</h4>       
+        <p class="card__price">$800</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="27">Add to Cart</button> 
+      </div>
+	</div>
+	</div>
+	
+
+  <!-- slidew 4 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\3d\frozen.jpg">  
+	  <center>
+        <h4 class="card__title">Elsa and Anna</h4>       
+        <p class="card__price">$650</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="28">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 5 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\3d\minions.png">  
+	  <center>
+        <h4 class="card__title">Minions Cake</h4>       
+        <p class="card__price">$450</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="29">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 6 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\3d\disney.png">  
+	  <center>
+        <h4 class="card__title">Disney Cake</h4>       
+        <p class="card__price">$900</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="30">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 7 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\3d\tj.png">  
+	  <center>
+        <h4 class="card__title">Tom and Jerry</h4>       
+        <p class="card__price">$700</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="31">Add to Cart</button> 
+      </div>
+	</div>
+	</div>   
+	
+	  <!-- slidew 8 --> 
+  <div class="contains">      
+  <div  class="slide">  
+  	<div class="card">
+      <img src="images\3d\heart.jpg">  
+	  <center>
+        <h4 class="card__title">Heart Pinata</h4>       
+        <p class="card__price">$600</p>
+		</center>
+        <button class="card__btn add-to-cart" data-id="32">Add to Cart</button> 
+      </div>
+	</div>
+	</div>
+	
+	<br>
+	<br>	
+   </div>
+	
+	
+<!-- partial -->
+</div>
+<div id="contactus" class="contact"> 
+   <div class="form-wrapper"> 
+    <form method="post"> 
+     <center> 
+      <br> 
+      <b> CONTACT US </b> 
+     </center> 
+     <br> 
+     <h4>First Name</h4> 
+     <input type="text" size="auto" required> 
+     <br> 
+     <br> 
+     <h4>Last Name </h4> 
+     <input type="text" size="auto" required> 
+     <br> 
+     <br> 
+     <h4> Email </h4> 
+     <input type="email" size="auto" required> 
+     <br> 
+     <br> 
+     <h4> Message </h4> 
+     <textarea size="200" cols="25" rows="10" required></textarea> 
+     <br> 
+     <br> 
+     <input type="submit" value="Submit"> 
+	 <br>
+    </form> 
+   </div> 
+   <br>
+  </div> 
+  </div>
+  <hr> 
+  <footer class="footer-distributed"> 
+   <div class="footer-left"> 
+    <h3>Cake<span>Bakers</span></h3> 
+    <p class="footer-links"> <a href="index.html" class="link-1">Home</a> <a href="index.html#favourites">Order</a> <a href="index.html#categories">Categories</a><a href="index.html#contactus">Contact us</a> <a href="signin.html">Sign in</a> </p> 
+    <p class="footer-company-name">Cake Bakers © Sadiya</p> 
+   </div> 
+   <div class="footer-center"> 
+    <div> 
+     <i class="fa fa-map-marker"></i> 
+     <p><span>102 Bakers lane</span> Andheri, Mumbai</p> 
+    </div> 
+    <div> 
+     <i class="fa fa-phone"></i> 
+     <p>+91 9090909090</p> 
+    </div> 
+    <div> 
+     <i class="fa fa-envelope"></i> 
+     <p><a href="mailto:support@company.com">cakebakers592@gmail.com</a></p> 
+    </div> 
+   </div> 
+   <div class="footer-right"> 
+    <p class="footer-company-about"> <span>About the company</span> Known for the best quality cakes around the city since years. Owned and managed by Sadiya, delivering cakes baked with love.</p> 
+    <div class="footer-icons"> 
+     <a href="#"><i class="fa fa-facebook"></i></a> 
+     <a href="#"><i class="fa fa-twitter"></i></a> 
+     <a href="#"><i class="fa fa-linkedin"></i></a> 
+     <a href="#"><i class="fa fa-github"></i></a> 
+    </div> 
+   </div> 
+  </footer>
+  <script  src="./script.js"></script>
+
+</body>
+</html>

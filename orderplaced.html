@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Order Placed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+</head>
+<body>
+<nav>
+<!-- partial:index.partial.html -->
+<header class="header">
+<div class="header__cart">
+   <input type="checkbox" id="check"> 
+   <label for="check" class="checkbtn"> <i class="fas fa-bars"></i> </label> 
+   <label class="logo">Cake<span>Bakers</span></label> 
+  
+  	     <b class="header__submenu" id="submenu">
+          <button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="25" height="25" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> </button>
+          <div id="shopping-cart" class="shopping-cart-container" style="height:300px;overflow-y:scroll;">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p><a href="payment.html">
+            <a href="payment.html" id="checkout-btn" class="cart-btn">Checkout</a>
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+          </div>
+        </b>
+  
+	 <ul>
+	     
+		 <li><a href="#">Home</a></li> 
+         <li><a href="#favourites">Order</a></li> 
+         <li><a href="#categories">Categories</a></li> 
+         <li><a href="#contactus">Contact us</a></li> 
+         <li><a href="signin.html">Sign in</a></li> 
+
+      </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+	
+</header>
+</nav>
+
+<div class="first">
+<div class="second">
+<h1><center>YOUR ORDER WAS PLACED....!<center></h1>
+</div><b>
+
+</div>
+<center>
+<p>The reference ID for your order is #37198AE526SHG</p><br>
+<a href="index.html">
+<button class="line">Shop More</button></a>
+<br>
+</center>
+  <hr> 
+  <footer class="footer-distributed"> 
+   <div class="footer-left"> 
+    <h3>Cake<span>Bakers</span></h3> 
+    <p class="footer-links"> <a href="index.html" class="link-1">Home</a> <a href="index.html#favourites">Order</a> <a href="index.html#categories">Categories</a><a href="index.html#contactus">Contact us</a> <a href="signin.html">Sign in</a> </p> 
+    <p class="footer-company-name">Cake Bakers © Sadiya</p> 
+   </div> 
+   <div class="footer-center"> 
+    <div> 
+     <i class="fa fa-map-marker"></i> 
+     <p><span>102 Bakers lane</span> Andheri, Mumbai</p> 
+    </div> 
+    <div> 
+     <i class="fa fa-phone"></i> 
+     <p>+91 9090909090</p> 
+    </div> 
+    <div> 
+     <i class="fa fa-envelope"></i> 
+     <p><a href="mailto:support@company.com">cakebakers592@gmail.com</a></p> 
+    </div> 
+   </div> 
+   <div class="footer-right"> 
+    <p class="footer-company-about"> <span>About the company</span> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet. </p> 
+    <div class="footer-icons"> 
+     <a href="#"><i class="fa fa-facebook"></i></a> 
+     <a href="#"><i class="fa fa-twitter"></i></a> 
+     <a href="#"><i class="fa fa-linkedin"></i></a> 
+     <a href="#"><i class="fa fa-github"></i></a> 
+    </div> 
+   </div> 
+  </footer>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
